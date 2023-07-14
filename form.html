@@ -1,0 +1,139 @@
+<html>
+    <center>
+        <head>
+            <style>
+                *{background-color: aqua;}
+                .c{background-color: white;}
+            </style>
+            <script>
+                function verify(){
+                    var a=document.getElementById("n").value;
+                    var b=/^[A-Za-z]{4,}\s[A-Za-z]{3,}\s[A-Za-z]{3,}$/;
+                    if(!a.match(b)){window.alert("Name should have first and last name")}
+                    var c=document.getElementById("fn").value;
+                    var d=/^[A-Za-z]{4,}\s[A-Za-z]{3,}\s[A-Za-z]{3,}$/;
+                    if(!c.match(d)){window.alert("Name should have first and last name")}
+                    var e=document.getElementById("pa").value;
+                    var f=/^[0-9]{1}\-[0-9]{2}\-[0-9]{2}\s[A-Za-z]{4,15}\s[A-Za-z]{3,10}\s[A-Za-z]{1,10}\s[A-Za-z]{3,10}\s[A-Za-z]{5,10}$/;
+                    if(!e.match(f)){window.alert("Give proper address")} 
+                    var g=document.getElementById("ad").value;
+                    var h=/^[0-9]{1}\-[0-9]{2}\-[0-9]{2}\s[A-Za-z]{4,15}\s[A-Za-z]{3,10}\s[A-Za-z]{1,10}\s[A-Za-z]{3,10}\s[A-Za-z]{5,10}$/;
+                    if(!g.match(h)){window.alert("Give proper address")}
+                    var i=document.getElementById("pc").value;
+                    var j=/^\d{6}$/;
+                    if(!i.match(j)){window.alert("Only number should be given and maxlength is 6")}
+                    var k=document.getElementById("e").value;
+                    var l=/^[a-z]{1,20}\d{2}\@[a-z]{2,10}\.[a-z]{3}$/;
+                    if(!k.match(l)){window.alert("Invalid Email-id")}
+                    var m=document.getElementById("d").value;
+                    var n=/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/; 
+                    if(!m.match(n)){window.alert("Format is DD/MM/YYYY")}
+                    var o=document.getElementById("m").value;
+                    var p=/^\d{10}$/;
+                    if(!o.match(p)){window.alert("Number contains max 10 digits")}
+                }
+            </script>
+        </head>
+    <body>
+    </br></br></br>
+        <table border="5" cellpadding="5" cellspacing="2">
+            <form>
+                <thead>
+                    <th colspan="2"><h3>Student Registration Form</h3></th>
+                </thead>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" size="30" class="c" id="n"/><font color="red">!! Enter your Name</font></td>
+                </tr>
+                <tr>
+                    <td>Father Name</td>
+                    <td><input type="text" size="30" class="c" id="fn"/><font color="red">!! Enter your Father Name</font></td>
+                </tr>
+                <tr>
+                    <td>Postal Address</td>
+                    <td><input type="text" size="30" class="c" id="pa"/><font color="red">!! Enter postal address</font></td>
+                </tr>
+                <tr>
+                    <td>Personal Address</td>
+                    <td><input type="text" size="30" class="c" id="ad"/><font color="red">!! Enter personal address</font></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" value="1"/> Male
+                        <input type="radio" value="2"/> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                       <select class="c">
+                        <option value="0" class="c">City</option>
+                        <option value="1" class="c">Hyderabad</option>
+                        <option value="2" class="c">Bangalore</option>
+                        <option value="3" class="c">Pune</option>
+                        <option value="4" class="c">Vishakapatnam</option>
+                       </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>
+                        <select class="c">
+                            <option value="0" class="c">Course</option>
+                            <option value="1" class="c">EEE</option>
+                            <option value="2" class="c">ECE</option>
+                            <option value="3" class="c">IT</option>
+                            <option value="4" class="c">CSE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>District</td>
+                    <td>
+                        <select class="c">
+                            <option value="0" class="c">District</option>
+                            <option value="1" class="c">Rangareddy</option>
+                            <option value="2" class="c">Bengaluru Urban</option>
+                            <option value="3" class="c">Pune</option>
+                            <option value="4" class="c">Vishakapatnam</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select class="c">
+                            <option value="0" class="c">State</option>
+                            <option value="1" class="c">Telangana</option>
+                            <option value="2" class="c">Karnataka</option>
+                            <option value="3" class="c">Goa</option>
+                            <option value="4" class="c">Andhra Pradesh</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PinCode</td>
+                    <td><input type="text" size="30" class="c" id="pc"/><font color="red">!! Enter the Pin code</font></td>
+                </tr>
+                <tr>
+                    <td>Email-ID</td>
+                    <td><input type="text" size="30" class="c" id="e"/><font color="red">!! Enter Email id</font></td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td><input type="text" size="30" class="c" id="d"/><font color="red">!! Enter the Date Of Birth</font></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.</td>
+                    <td><input type="text" size="30" class="c" id="m"/><font color="red">!! Enter the mobile number</font></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Reset" class="c"/></td>
+                    <td><input type="submit" value="Submit Form" class="c" onClick="verify()"/></td>
+                </tr>
+            </form>
+        </table>
+    </body>
+    </center>
+</html>
